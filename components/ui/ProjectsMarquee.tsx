@@ -48,13 +48,13 @@ const projects = [
   },
 ];
 
-export const ProjectsMarquee = () => {
+export const ProjectsMarquee = ({reverse}: {reverse: boolean | undefined}) => {
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
   return (
-    <section className='max-w-screen-lg overflow-hidden mx-auto mt-auto mb-24 md:mb-48'>
+    <section className='max-w-screen-lg overflow-hidden mx-auto'>
       <h1 className="text-white pl-8 py-2 text-s md:text-lg">projects</h1>
       <div className="relative">
-        <Marquee pauseOnHover className="[--duration:30s]">
+        <Marquee pauseOnHover className="[--duration:30s]" reverse={reverse}>
           {projects.map((project) => (
             <ProjectCard
               project={project}

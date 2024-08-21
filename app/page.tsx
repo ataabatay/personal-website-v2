@@ -17,8 +17,13 @@ export default function Home() {
   return (
     <>
       <AnimatedGridBackground />
-      <main className="max-w-screen h-screen flex flex-col text-light-text overflow-hidden">
-        <ProjectsMarquee />
+      <main className="max-w-screen h-screen flex flex-col justify-center text-light overflow-hidden">
+        <ProjectsMarquee reverse={false}/>
+        <div className="opacity-40 blur-lg -z-50">
+          <ProjectsMarquee reverse={true}/>
+          <ProjectsMarquee reverse={false}/>
+        </div>
+        <ProjectsMarquee reverse={true}/>
       </main>
     </>
   );

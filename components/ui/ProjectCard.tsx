@@ -27,8 +27,8 @@ export const ProjectCard = ({
         onMouseLeave={onLeave}
         className={`
           flex rounded text-slate-200 bg-slate-900
-          transform transition-all duration-200 ease-in-out min-h-36 w-[500px] scale-90 md:scale-100 md:mx-2
-          ${isHovered ? 'scale-105' : 'grayscale'}
+          transform transition-all duration-150 ease-in-out min-h-36 w-[500px] scale-90 md:scale-100 md:mx-2
+          ${isHovered ? 'md:scale-105' : 'grayscale'}
         `}
       >
         <Image src={project.projectImg} alt="project-image" className="relative min-h-36 w-40 rounded" />
@@ -46,7 +46,7 @@ export const ProjectCard = ({
                 </span>
               ))}
             </div>
-            <div className="links flex gap-4 items-center">
+            <div className="links flex gap-4 self-end">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
