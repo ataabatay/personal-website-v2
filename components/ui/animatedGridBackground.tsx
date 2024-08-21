@@ -13,13 +13,13 @@ export default function AnimatedGridBackground() {
         </h1>
         <p>I&apos;m a full-stack software developer.</p>
       </div>
-      {/* <AnimatedGridPattern
-        numSquares={30}
+      <AnimatedGridPattern
+        numSquares={20}
         maxOpacity={0.1}
-        duration={3}
-        repeatDelay={1}
-        className={cn('[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]')}
-      /> */}
+        duration={1}
+        repeatDelay={0.5}
+        className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
+      />
     </div>
   );
 }

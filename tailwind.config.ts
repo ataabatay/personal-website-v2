@@ -14,16 +14,6 @@ const config = {
     },
     extend: {
       colors: {
-
-        // ! Custom Colors
-        'cst-org': '#FB8F37',
-        'cst-grn': '#A5CA2B',
-        'cst-blue': '#00457A',
-        
-
-
-
-
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

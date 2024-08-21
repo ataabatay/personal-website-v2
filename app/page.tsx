@@ -1,5 +1,5 @@
-import { MarqueeBackward, MarqueeForward } from './marquee';
-import AnimatedGridBackground from './ui/animatedGridBackground';
+import AnimatedGridBackground from '../components/ui/animatedGridBackground';
+import { ProjectsMarquee } from '../components/ui/ProjectsMarquee';
 
 const LinksArray = [
   { id: 1, type: 'nav', name: 'about' },
@@ -17,20 +17,8 @@ export default function Home() {
   return (
     <>
       <AnimatedGridBackground />
-      <main className="max-w-screen min-h-screen flex flex-col justify-center items-center text-light-text">
-        <div className="overflow-hidden w-screen sm:max-w-screen-md">
-          <MarqueeForward items={LinksArray} />
-        </div>
-        <div className="overflow-hidden w-screen sm:max-w-screen-md -z-50 opacity-15">
-          <MarqueeBackward items={LinksArray} />
-        </div>
-        <div className="overflow-hidden w-screen sm:max-w-screen-md -z-50 opacity-15">
-          <MarqueeForward items={LinksArray} />
-        </div>
-        <div className="overflow-hidden w-screen sm:max-w-screen-md">
-          <p className="text-white py-2">Projects</p>
-          <MarqueeBackward items={LinksArray} />
-        </div>
+      <main className="max-w-screen h-screen flex flex-col text-light-text overflow-hidden">
+        <ProjectsMarquee />
       </main>
     </>
   );
