@@ -1,30 +1,21 @@
 import AnimatedGridBackground from '../components/ui/animatedGridBackground';
 import { ProjectsMarquee } from '../components/ui/ProjectsMarquee';
-
-const LinksArray = [
-  { id: 1, type: 'nav', name: 'about' },
-  { id: 2, type: 'nav', name: 'experience' },
-  { id: 3, type: 'nav', name: 'contact' },
-  { id: 4, type: 'project', name: 'project1', img: 'https://picsum.photos/id/22/200' },
-  { id: 5, type: 'project', name: 'project2', img: 'https://picsum.photos/id/23/200' },
-  { id: 6, type: 'project', name: 'project3', img: 'https://picsum.photos/id/24/200' },
-  { id: 7, type: 'project', name: 'project4', img: 'https://picsum.photos/id/25/200' },
-  { id: 8, type: 'project', name: 'project5', img: 'https://picsum.photos/id/26/200' },
-  { id: 9, type: 'project', name: 'project6', img: 'https://picsum.photos/id/27/200' },
-];
+import MainLayout from '@/components/layouts';
+import BlurFade from '@/components/magicui/blur-fade';
 
 export default function Home() {
   return (
     <>
-      <AnimatedGridBackground />
-      <main className="max-w-screen h-screen flex flex-col justify-center text-light overflow-hidden">
-        <ProjectsMarquee reverse={false}/>
-        <div className="opacity-40 blur-lg -z-50">
-          <ProjectsMarquee reverse={true}/>
-          <ProjectsMarquee reverse={false}/>
-        </div>
-        <ProjectsMarquee reverse={true}/>
-      </main>
+      <BlurFade delay={0.15} inView>
+        <AnimatedGridBackground />
+        <MainLayout>
+          <div className="opacity-40 blur-lg -z-50">
+            <ProjectsMarquee reverse={false} />
+            <ProjectsMarquee reverse={true} />
+          </div>
+          <ProjectsMarquee reverse={false} />
+        </MainLayout>
+      </BlurFade>
     </>
   );
 }
