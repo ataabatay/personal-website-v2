@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <MainLayout>
         <AnimatedGridBackground />
-        <h1 className="text-white">All projects</h1>
+        <h1 className="text-white">About me</h1>
       </MainLayout>
     </>
   );

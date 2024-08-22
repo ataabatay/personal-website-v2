@@ -6,16 +6,14 @@ import BlurFade from '@/components/magicui/blur-fade';
 export default function Home() {
   return (
     <>
-      <BlurFade delay={0.15} inView>
+      <MainLayout>
         <AnimatedGridBackground />
-        <MainLayout>
-          <div className="opacity-40 blur-lg -z-50">
-            <ProjectsMarquee reverse={false} />
-            <ProjectsMarquee reverse={true} />
-          </div>
+        <div className="opacity-40 blur-lg -z-50">
           <ProjectsMarquee reverse={false} />
-        </MainLayout>
-      </BlurFade>
+          <ProjectsMarquee reverse={true} />
+        </div>
+        <ProjectsMarquee reverse={false} />
+      </MainLayout>
     </>
   );
 }

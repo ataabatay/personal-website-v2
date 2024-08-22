@@ -1,57 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import project1Img from '../../public/alfred.png';
 import { ProjectCard } from './ProjectCard';
 import Marquee from '@/components/magicui/marquee';
+import { projects } from '@/lib/projects';
 
-const projects = [
-  {
-    id: 0,
-    projectName: 'Alfred',
-    projectDescription:
-      'A fantasy football helper app to visualise fixture and player data for better decision making, A fantasy football helper app to visualise fixture and player data for better decision making',
-    projectTechnologies: ['React', 'Tailwind', 'FPL API', 'React', 'Tailwind', 'FPL API'],
-    projectImg: project1Img,
-    deploymentLink: 'https://www.ataabatay.com',
-    githubLink: 'https://www.ataabatay.com',
-  },
-  {
-    id: 1,
-    projectName: 'Alfred',
-    projectDescription:
-      'A fantasy football helper app to visualise fixture and player data for better decision making, A fantasy football helper app to visualise fixture and player data for better decision making',
-    projectTechnologies: ['React', 'Tailwind', 'FPL API', 'React', 'Tailwind', 'FPL API'],
-    projectImg: project1Img,
-    deploymentLink: 'https://www.ataabatay.com',
-    githubLink: 'https://www.ataabatay.com',
-  },
-  {
-    id: 2,
-    projectName: 'Alfred',
-    projectDescription:
-      'A fantasy football helper app to visualise fixture and player data for better decision making, A fantasy football helper app to visualise fixture and player data for better decision making',
-    projectTechnologies: ['React', 'Tailwind', 'FPL API', 'React', 'Tailwind', 'FPL API'],
-    projectImg: project1Img,
-    deploymentLink: 'https://www.ataabatay.com',
-    githubLink: 'https://www.ataabatay.com',
-  },
-  {
-    id: 3,
-    projectName: 'Alfred',
-    projectDescription:
-      'A fantasy football helper app to visualise fixture and player data for better decision making, A fantasy football helper app to visualise fixture and player data for better decision making',
-    projectTechnologies: ['React', 'Tailwind', 'FPL API', 'React', 'Tailwind', 'FPL API'],
-    projectImg: project1Img,
-    deploymentLink: 'https://www.ataabatay.com',
-    githubLink: 'https://www.ataabatay.com',
-  },
-];
-
-export const ProjectsMarquee = ({reverse}: {reverse: boolean | undefined}) => {
+export const ProjectsMarquee = ({ reverse }: { reverse: boolean | undefined }) => {
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
   return (
-    <section className='max-w-screen-lg overflow-hidden mx-auto'>
+    <section className="max-w-screen-lg overflow-hidden mx-auto">
       <h1 className="text-white pl-8 py-2 text-s md:text-lg">projects</h1>
       <div className="relative">
         <Marquee pauseOnHover className="[--duration:30s]" reverse={reverse}>

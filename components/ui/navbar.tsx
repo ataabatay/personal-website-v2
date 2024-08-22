@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { HomeIcon, MailIcon } from 'lucide-react';
-import { Dock, DockIcon } from '@/components/magicui/dock';
+import { Dock } from '@/components/magicui/dock';
 import { Separator } from '@/components/ui/separator';
-import { cn } from '@/lib/utils';
-import { buttonVariants } from './button';
 
 type IconProps = React.HTMLAttributes<SVGElement>;
 const Icons = {
